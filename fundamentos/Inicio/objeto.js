@@ -19,3 +19,6 @@ const prod2 ={
     }
 }
 console.log(prod2)
+
+// O JSON é assim:
+'{"nome":"Camisa polo", "preco":79,99}'
