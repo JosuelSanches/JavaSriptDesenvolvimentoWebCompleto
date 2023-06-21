@@ -2,4 +2,4 @@
  e retorne a base elevada ao expoente.**/
 
  const elevada = (x,y)=> x**y
- console.log(elevada(8,2))
+ console.log(elevada(9,2))
