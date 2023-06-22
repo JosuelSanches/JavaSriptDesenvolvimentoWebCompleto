@@ -12,6 +12,7 @@ jogo. (Número do pior jogo).
 const point = (pontos)=>{
     let recorde = 0
     let pior = 0
+    let numPior =0
     let numRecorde = []
     for(let i = 0; i <pontos.length; i++ ){
         if(i == 0 || pontos[i] > recorde  ){
@@ -19,20 +20,22 @@ const point = (pontos)=>{
             numRecorde.push(pontos[i])
             if(i == 0){
                 pior = pontos[i]
+                numPior = i
             }
         }else if(pontos[i] < pior){
             pior = pontos[i]
+            numPior = i
         }
     }
     return tabela={
-        pior,
+        numPior,
         numRecorde
 
     }
 }
 
-let pontos = [10, 2, 30, 90, 5, 1, 3]
+let pontos = [10, 2, 30, 90, 5, 9, 3]
 console.log(pontos)
 let mostrar = point(pontos)
-console.log(`A sua pior pontuação foi ${mostrar.pior} e os seus recordes foram
- ${mostrar.numRecorde} desde o primeiro jogo bateu o recorde ${mostrar.numRecorde.length} vezes.`)
+console.log(`A sua pior pontuação foi no ${mostrar.numPior}º jogo e os seus recordes foram
+ ${mostrar.numRecorde.pop(0)} desde o primeiro jogo bateu o recorde ${mostrar.numRecorde.length-1} vezes.`)
