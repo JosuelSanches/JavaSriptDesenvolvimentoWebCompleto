@@ -1,16 +1,38 @@
-/* Construa uma função que receba como parâmetros as alturas e as taxas de crescimento anuais de duas
-crianças e calcule se existe uma criança menor, caso exista se a criança menor ultrapassará a maior e em
-quantos anos isso acontecerá. Utilize centímetros para as unidades de medida.
- */
-
-const crescimento = (crianca) =>{
-    if(crianca[0].altura > crianca[1].altura){
-        console.log(`${crianca[0].nome} é maior.`)
+function calcularCrescimento(altura1, taxa1, altura2, taxa2) {
+    if(altura1 == altura2){
+        if (taxa1 > taxa2) {
+            return 'A criança 1 ultrapassará a criança 2 em 1 ano.'
+        } else if(taxa1 < taxa2) {
+            return 'A criança 2 ultrapassará a criança 1 em 1 ano.'
+        }else{
+            return 'As crianças tem igual altura e crescimento.'
+        }
+    } else {
+        if (altura1 > altura2) {
+            if(taxa1 >= taxa2){
+                return 'A criança menor não ultrapassará a maior.'
+            }else{
+               return `A criança menor ultrapassará a maior em ${calcularTempo(altura2, taxa2, altura1, taxa1)} anos` 
+            }
+        } else {
+            if(taxa2 >= taxa1){
+                return 'A criança menor não ultrapassará a maior.'
+            }else{
+               return `A criança menor ultrapassará a maior em ${calcularTempo(altura1, taxa1, altura2, taxa2)} anos` 
+            }
+        }
     }
-
 }
-const crianca=[
-    {nome: 'Joao', idade: 14, altura: 170, taxa: 1.3}
-    {nome: 'Jose', idade: 8, altura: 169, taxa: 1.3}
-]
-crescimento(170, 1,2 )
+
+function calcularTempo(alturaMenor, taxaAlturaMenor, alturaMaior, taxaAlturaMaior){
+    let qtdAnos = 0
+    while (alturaMenor < alturaMaior) {
+        alturaMenor += taxaAlturaMenor
+        alturaMaior += taxaAlturaMaior
+        qtdAnos++
+    }
+    //console.log(qtdAnos)
+    return qtdAnos
+}
+
+console.log(calcularCrescimento(150, 5, 200, 4));
