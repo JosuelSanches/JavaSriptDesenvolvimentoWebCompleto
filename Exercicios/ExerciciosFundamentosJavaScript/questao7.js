@@ -21,4 +21,4 @@ const estaEntre = (numero, minimo, maximo, inclusivo = false)=>{
 }
 
 }
-console.log(estaEntre(90, 10, 100))
+console.log(estaEntre(10, 10, 100))
