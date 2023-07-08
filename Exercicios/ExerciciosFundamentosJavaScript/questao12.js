@@ -8,7 +8,7 @@ Você escreverá uma função que recebe um objeto como primeiro parâmetro e, c
 nome de uma propriedade contida nesse objeto. Em seguida, retorne uma cópia desse objeto sem a 
 propriedade especificada no segundo parâmetro.*/
 const refatorar = (ob,propriedade)=>{
-    let copia = ob
+    const copia = {...ob}
     delete copia[propriedade]
     return copia
 }
