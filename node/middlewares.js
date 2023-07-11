@@ -1,6 +1,6 @@
 // middleware pattern (chain of responsibility)
-const passo1 = (cotx, next)=>{
-    cotx.valor1 = 'mid1'
+const passo1 = (ctx, next)=>{
+    ctx.valor1 = 'mid1'
     next()
 }
 
