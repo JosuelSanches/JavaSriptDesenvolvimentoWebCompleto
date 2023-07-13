@@ -7,9 +7,13 @@ if (anonimo){
     process.stdout.write('Informe o seu nome: ')
     process.stdin.on('data', data =>{
         let nome = data.toString()
-        nome = nome.substring(0,nome.length -1)
+        nome = nome.slice(0,-1)
 
-        process.stdout.write(`Fala${nome}!!` )
+        process.stdout.write("Fala") 
+
+        process.stdout.write(nome)
+
+        process.stdout.write("!!")
         process.exit()
     })
 }
