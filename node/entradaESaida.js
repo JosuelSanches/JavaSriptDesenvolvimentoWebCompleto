@@ -6,9 +6,10 @@ if (anonimo){
 }else{
     process.stdout.write('Informe o seu nome: ')
     process.stdin.on('data', data =>{
-        const nome = data.toString().replace('\n', '')
+        let nome = data.toString()
+        nome = nome.substring(0,nome.length -1)
 
-        process.stdout.write("Fala " +nome+ "!!" )
+        process.stdout.write(`Fala${nome}!!` )
         process.exit()
     })
 }
