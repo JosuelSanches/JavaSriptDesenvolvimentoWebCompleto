@@ -4,7 +4,8 @@ Escreva esta funcao que recebe como primeiro parametro uma palavra e, como segun
 um array de strings. A funcao devera filtrar as palavras do array que contem nelas a 
 string do primeiro parametro. */
 const buscaPalavras = (busca, em)=>{
-    let igual = 0
+    return em.filter(palavra => palavra.includes(busca))
+    /*let igual = 0
     let palavras =[]
     for(let j in em){
         for(let i in busca){
@@ -17,7 +18,7 @@ const buscaPalavras = (busca, em)=>{
             }
 
         }
-    } return palavras
+    } return palavras*/
 }
 let palavras = [`programacao`,`mobile`, `proficional`, `pro` ]
 console.log(buscaPalavras(`pro`, palavras))
