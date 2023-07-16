@@ -7,11 +7,15 @@ let obj ={
     c: 3
 }
 console.log(obj)
+const inverter = (obj)=>{
+    let novo = Object.entries(obj).map(obj => obj.reverse())
+    return Object.fromEntries(novo)
+}
 
-const inverter = (objeto)=>{
+/*const inverter = (objeto)=>{
     let invertido = Object.entries(objeto).map(chaveValor => chaveValor.reverse())
     return Object.fromEntries(invertido)
-}
+}*/
 
 console.log(inverter(obj))
 
