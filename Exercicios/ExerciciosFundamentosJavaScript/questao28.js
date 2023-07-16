@@ -4,8 +4,17 @@ que especifica a quantidade de digitos.
 Essa fumcao devera retornar apenas aqueles numeros 
 do array que tem a quantidade de digitos indicadas pelo segundo parametro. */
 let numeros = [1, 19, 29, 9, 0, 711, 28, 200]
+const numsDesejados = (numbers, quantCasasDec)=>{
+    let resultado = []
+    numbers.filter(num => {
+        if((String(num).length) === quantCasasDec){
+            resultado.push(num)
+        }
+    })
+    return resultado
+}
 
-const quantDig = (nums, num)=>{
+/*const quantDig = (nums, num)=>{
     let resultado =[]
     for(let n of nums){ 
         if((String(n).length) === num){
@@ -15,5 +24,5 @@ const quantDig = (nums, num)=>{
     }
 
     return resultado
-} 
-console.log(quantDig(numeros, 3))
+}*/ 
+console.log(numsDesejados(numeros, 2))
