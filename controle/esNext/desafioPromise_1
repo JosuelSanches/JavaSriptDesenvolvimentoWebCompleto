@@ -12,4 +12,7 @@ function lerArquivo(caminho){
 
 const caminho = path.join(__dirname, `dados.txt`)
 lerArquivo(caminho)
+    .then(text => text.split(`\n`))
+    .then(text => text.join(`\n`))
+    .then(text => `O texto final e: \n${text}`)
     .then(console.log)
