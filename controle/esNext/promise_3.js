@@ -10,4 +10,7 @@ function gerarNumerosEntre(min,max){
     })
 }
 
-gerarNumerosEntre(10, 90).then(console.log)
+gerarNumerosEntre(10, 90)
+    .then(num => num +2)
+    .then(num => Math.floor((num * 3) /4))
+    .then(console.log)
