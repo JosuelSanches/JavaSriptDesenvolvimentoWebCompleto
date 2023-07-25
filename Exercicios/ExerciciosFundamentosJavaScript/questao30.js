@@ -6,9 +6,9 @@ nas notas. */
 
 let alunos = [
     {
-    nome: 'Joao',
+    nome:'Joao',
     notas: [8, 7.6, 8.9, 6]
-},
+    },
 {
     nome: "Mariana",
     notas: [9, 6.6, 7.9, 8]
