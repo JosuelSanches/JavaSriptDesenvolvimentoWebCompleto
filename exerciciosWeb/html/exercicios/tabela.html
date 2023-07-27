@@ -1,0 +1,52 @@
+<table>
+    <caption>Produtos</caption>
+    <thead>
+        <tr>produto</tr>
+        <tr>preco</tr>
+        <tr>quantidade</tr>
+        <tr>total</tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPad</td>
+            <td>3289,00</td>
+            <td>5</td>
+            <td>16445,00</td>
+        </tr>
+        <tr>
+            <td>JBL boombox 3 </td>
+            <td>2489,00</td>
+            <td>2</td>
+            <td>4978,00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td>
+            <td>21423,00</td>
+        </tr>
+    </tfoot>
+</table>
+<style>
+    table {
+        border-collapse: collapse
+    }
+    th, td {
+        padding: 10px
+    }
+    thead tr {
+        border-bottom: solid 3px #444;
+    }
+    /* O hover representa a passagem do mouse */
+    /* para fazer que com que funcione em toda
+    extencao da tabela e so tirar o tbody do 
+    comando. */
+    tbody tr:hover{
+        background-color: #dedede;
+    }
+    tfoot{
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
