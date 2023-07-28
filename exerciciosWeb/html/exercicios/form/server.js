@@ -8,4 +8,4 @@ app.post('/usuario',(req, resp) => {
     console.log(req.body)
     resp.send(`<h1>Parabens</h1>`)
 })
-app.listen(3003)
+app.listen(3000)
