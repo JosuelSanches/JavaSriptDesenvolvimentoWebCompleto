@@ -6,32 +6,30 @@ nas notas. */
 
 let alunos = [
     {
-    nome:'Joao',
-    notas: [8, 7.6, 8.9, 6]
+        nome: 'Joao',
+        notas: [8, 7.6, 8.9, 6]
     },
-{
-    nome: "Mariana",
-    notas: [9, 6.6, 7.9, 8]
-},
-{
-    nome: "Carla",
-    notas: [7, 7, 8, 9]
-}
+    {
+        nome: "Mariana",
+        notas: [9, 6.6, 7.9, 8]
+    },
+    {
+        nome: "Carla",
+        notas: [7, 7, 8, 9]
+    }
 ]
 
-const soma = array => array.reduce((acumulador, atual)=> acumulador + atual, 0)
-const media = array => soma(array)/ array.legth
-
-function receberMelhorEstudante(estudantes){
+const soma = array => array.reduce((acumulador, atual) => acumulador + atual, 0)
+const media = array => soma(array) / array.length
+function recerberMelhorEstudante(estudantes) {
     const estudantesComMedias = Object.entries(estudantes).map(estudante => {
         const chave = 0,
-              valor = 1
-        return{nome : estudante[chave], media: media(estudante[valor])}
-
+            valor = 1
+        return { nome: estudante[chave], media: media(estudante[valor]) }
     })
     const estudantesOrdenados = estudantesComMedias.sort((estudanteA, estudanteB) => estudanteB.media - estudanteA.media)
     const melhorEstudante = estudantesOrdenados[0]
     return melhorEstudante
 }
 
-console.log(receberMelhorEstudante(alunos))
+console.log(recerberMelhorEstudante(alunos))
