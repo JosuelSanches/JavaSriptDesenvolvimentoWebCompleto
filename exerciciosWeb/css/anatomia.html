@@ -5,7 +5,29 @@
     <meta charset="UTF-8">
     <title>Anatomia CSS</title>
     <style>
-        /* ... */
+        .selector{
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            /*multiplos valores*/
+            border: solid 5px navy; /* shorthand property */
+            font-family: Helvetica, sans-serif; /*Ele pode colocar a 1 ou a 2 se nao achar a 1*/
+            /* funcoes */
+            width: calc(100% - 40px);
+            background-color: rgb(34,152,189);
+        }
+        /* Usando uma pseudo-classe */
+        .selector:hover{
+            background-color: crimson;
+        }
+        /* Usando um pseudo-elemento */
+        .selector::first-letter{
+            font-size: 70px;
+            color:darkblue;
+            font-weight: bold;
+        }
+        /* padrao de nomenclatura? */
+        /* dask-case ou camelCase? */
     </style>
 </head>
 
