@@ -15,8 +15,15 @@
                     /*#aninhado section{ Para selecionar algum elemento que nao esta
                          diretamente aninhado e so retirar o sinal de maior que.
                          Assim pegando qualquer descendente do tipo section. */
-                         p + ul{/* Para pegar uma tag que esta diretamente depois de outra */
-            color: #ff0;
+                         /*p + ul{/* Para pegar uma tag que esta diretamente depois e nao dentro de outra */
+            /* p ~ ol {Para pegar um vizinho que forma geral */
+        [feira]{/* seletor que procura todas as propriedades que 
+procura todos os elementos com determinada propriedade e para pegar possiveis elementos
+como no exemplo temmos `escritorio empresa` nesse caso [feira ~= escritorio] e se 
+for de uma palavra se usa apenas o sinal de igual.
+Para percorer o texto buscando trexos de palavras se uso asterisco seguido
+do trexo da palavra [feira*sa] por exemplo.*/
+                            color: #ff0;
             background-color: #f77;
         }
     </style>
