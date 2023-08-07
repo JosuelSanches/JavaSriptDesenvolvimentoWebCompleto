@@ -17,12 +17,14 @@
                          Assim pegando qualquer descendente do tipo section. */
                          /*p + ul{/* Para pegar uma tag que esta diretamente depois e nao dentro de outra */
             /* p ~ ol {Para pegar um vizinho que forma geral */
-        [feira]{/* seletor que procura todas as propriedades que 
-procura todos os elementos com determinada propriedade e para pegar possiveis elementos
+        /*[feira]{/* seletor que procura todas as propriedades 
+e todos os elementos com determinada propriedade para pegar possiveis elementos
 como no exemplo temmos `escritorio empresa` nesse caso [feira ~= escritorio] e se 
 for de uma palavra se usa apenas o sinal de igual.
 Para percorer o texto buscando trexos de palavras se uso asterisco seguido
 do trexo da palavra [feira*sa] por exemplo.*/
+/* span:nth-child(1){ com este seletor e possivel pegar o primeiro filho do tipo span*/
+    section > :nth-child(odd){
                             color: #ff0;
             background-color: #f77;
         }
@@ -48,7 +50,7 @@ do trexo da palavra [feira*sa] por exemplo.*/
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
