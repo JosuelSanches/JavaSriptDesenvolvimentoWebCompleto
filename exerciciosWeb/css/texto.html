@@ -16,6 +16,60 @@
             flex-direction: column;
             align-items: center;
         }
+        html{
+            font-size: 20px;
+        }
+        div{
+            font-size: 50px;
+        }
+        p{
+            /* Valor padrao em unidades diferentes */
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+            /* Unidades absolutas */
+            font-size: 100px;/*O tamanho do pixel e relativo*/
+            font-size: 72pt;/*Equivale a uma polegada*/
+            font-size: 1in;/*Uma polegada*/
+            /* Unidades relativas */
+            font-size: 2.2em;/*O em pega a fonte de referencia mais proxima para aplicar a opcao*/
+            font-size: 2.2rem;/*Usa a fonte raiz do html como referencia*/
+            font-size: 50vh;
+            font-size: 5vw;
+
+            font-family:monospace;
+            font-family: Georgia, serif;/*Nesse caso ele busca a primeira fonte que e georgia e se nao encontrar ele usa a fonte serif.*/
+            font-family: Verdana, sans-serif;
+            font-family:'Indie flower', cursive;
+
+            /* Selecionando o peso da fonte */
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            text-transform: lowercase;
+            /* text-decoration: overline underline line-through; */
+            /* text-decoration:line-through; */
+            text-transform: capitalize;
+            word-spacing: 10px;
+            letter-spacing:20px;
+            line-height: 2.5em;
+            text-align: center;
+        }
+        .botao{
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius:25px;
+        }
+        .destaque{
+            color:#fff;
+            background-color: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+        .destaque:active{
+            box-shadow: none;
+        }
     </style>
 </head>
 
