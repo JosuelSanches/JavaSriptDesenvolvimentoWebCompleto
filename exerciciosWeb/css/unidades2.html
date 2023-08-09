@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <title>Unidades #02</title>
     <style>
-        /* ... */
+        .fora{
+            position: relative;
+            background-color: orangered;
+            height:300px;
+            width:300px;
+            padding:50px;
+        }
+        .dentro{
+            background-color:goldenrod;
+            height:100px;
+            width:100%;
+            position: static;/*Ele vai ocupar apenas o espaco reservado ao conteudo.*/
+            position: relative;/*Nao mudara nada*/
+            position: absolute;/*Neste caso ele considera o tamanho do padding(Conteudo mais pading) tambem.*/
+            position: fixed;/*viewport*/
+        }
     </style>
 </head>
 <body>
     <div class="fora">
-        <div class="dentro"></div>
+        <div class="dentro">Unidades<h1>UNIDADES</h1></div>
     </div>
 </body>
 </html>
