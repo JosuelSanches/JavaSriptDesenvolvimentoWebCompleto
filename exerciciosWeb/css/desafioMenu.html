@@ -66,8 +66,37 @@
         }
         .autenticacao{
             float:right;
-            height:0px;
-            padding:10px;
+            height: 80px;
+            padding: 25px;
+        }
+        .menu a:hover,
+        .menu a.selected{
+            background-color: #14ba;
+            color: #000;
+        }
+        .botao{
+            border-radius: 30px;
+            padding: 10px 25px;
+            margin: 10px;
+        }
+        .destaque{
+            background: #f50a31;
+            color: #fff;
+        }
+        @media(min-width: 679px){
+            .menu-toggle{
+                display: none;
+            }
+        }
+        @media(max-width: 680px){
+            .menu{
+                display: none;
+            }
+        }
+        @media(max-width: 910px){
+            .autenticacao{
+                display:none;
+            }
         }
    
     </style>
@@ -106,7 +135,15 @@
     </header>
 
     <script>
-        // ...
+        window.onhashchange = function(e){
+            const oldURL = e.oldURL.split('#')[1]
+            const newURL = e.newURL.split('#')[1]
+            console.log(`A antiga URL: ${oldURL}--A nova URL: ${newURL}`)
+            const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
+            const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
+            oldLink && oldLink.classList.remove(`selected`)
+            newLink && newLink.classList.add(`selected`)   
+             }
     </script>
 </body>
 
