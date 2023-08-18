@@ -9,7 +9,33 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div')
+        div1.classList.add('destaque')
+        div1.innerHTML = 'Primeiro'
+        // div1.classList.remove('destaque')
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor')
+        div2.innerHTML = 'segundo'
+        const p = document.createElement('p')
+        p.innerHTML = 'terceiro'
+        const div3 = document.createElement('div')
+        div3.appendChild(p)
+        /*Caso esta div tivesse algum elemento 
+        este seria adicionado no final*/
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3)// Nao so a div3 sera adcionada como tbm seus filhos
+
+        const div4 = div3.cloneNode(true)/*A clonagem profunda true permite
+        que ele copie todos os filhos da div no caso*/
+        body.appendChild(div4)
+
+        const texto = document.createTextNode('Antes...')
+        div3.insertBefore(texto, div3.childNodes[0])
+        // body.removeChild(div3)
     </script>
 </body>
 
