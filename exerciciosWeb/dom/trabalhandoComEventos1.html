@@ -9,12 +9,14 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br" onclick="navegaEm5s(event)">Google</a>
+        <!-- <a href="https://google.com.br" onclick="navegaEm5s(event)">Google</a> -->
+        <a espera-um-pouco href="https://google.com.br">Google</a>
         <!--A vantagem do uso de onclick e que fica mais claro as intencoes 
         de se fazer uma manipulacao relacionada ao clique para quem 
         possa esta eventualmente fazendo a leitura do codigo.
         A desvantagem e que voce tem que fazer a escrita diretamente no link 
-        o que nao e tao interessante de se fazer. (A chamada se torna hardCoded)-->
+        o que nao e tao interessante de se fazer, isso faz com que voce tenha que ir 
+        em cada tag mudar se for necessario. (A chamada se torna hardCoded)-->
     </div>
     <script>
         function navegaEm5s(e){
@@ -25,5 +27,20 @@
                 window.location.href = link.href
             }, 5000)
         }
+
+        //Outra forma
+        /*const a = document.querySelector('a')
+        a.onclick = navegaEm5s*/
+        /*Nesse caso nao foi necessario mudar a tag e isso faz com que 
+        nao seja simples de saber se ha uma manipulacao por javascrip 
+        caso alguem leia o codigo.*/
+
+        /*Outra forma e usando um atributo personalizado como a seguir.
+        O atributo personalizado e ignorado na leitura do browser e 
+        se alguem ler o codigo vai entender que aquele atributo esta 
+        la para possivelmente ser usado pelo javascript para alguma 
+        manipulacao.*/
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
     </script>
 </body>
