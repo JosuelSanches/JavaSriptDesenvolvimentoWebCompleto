@@ -9,9 +9,21 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <a href="https://google.com.br" onclick="navegaEm5s(event)">Google</a>
+        <!--A vantagem do uso de onclick e que fica mais claro as intencoes 
+        de se fazer uma manipulacao relacionada ao clique para quem 
+        possa esta eventualmente fazendo a leitura do codigo.
+        A desvantagem e que voce tem que fazer a escrita diretamente no link 
+        o que nao e tao interessante de se fazer. (A chamada se torna hardCoded)-->
     </div>
     <script>
-        // ...
+        function navegaEm5s(e){
+            e.preventDefault()// e usado para que o comportamento padrao seja parado e voce posso ter o controle de como isso vai ocorrer.
+            console.log('Saindo em 5 segundos ...')
+            setTimeout(()=>{
+                const link = e.target// ele so foi atribuido para essa constante para que fique claro que se trata do link
+                window.location.href = link.href
+            }, 5000)
+        }
     </script>
 </body>
