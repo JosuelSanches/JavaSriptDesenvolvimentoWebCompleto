@@ -35,3 +35,10 @@
     background:linear-gradient(90deg, #639301, #A5EB2E);
     border:2px solid #000
 }
+.barreira .corpo{
+    height:150px;
+    width:110px;
+    background:linear-gradient(90deg, #639301, #A5EB2E);
+    border-left:2px solid #000;
+    border-right:2px solid #000;
+}
