@@ -16,7 +16,7 @@
     <script>
         function exibirResultado(id, dados){
             const texto = JSON.stringify(dados)
-            document.getelementById(id).innerHTML = texto
+            document.getElementById(id).innerHTML = texto
         }
         axios.get('parOuImpar', {
             params: {
