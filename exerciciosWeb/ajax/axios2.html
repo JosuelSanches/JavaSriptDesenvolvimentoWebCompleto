@@ -25,5 +25,10 @@
             }
         }).then(resp => exibirResultado('get', resp.data))
 
+        axios.post('formulario', {
+            nome: 'Joao',
+            sobrenome:'Martins'
+        }).then(resp => exibirResultado('post', resp.data))
+
     </script>
 </body>
