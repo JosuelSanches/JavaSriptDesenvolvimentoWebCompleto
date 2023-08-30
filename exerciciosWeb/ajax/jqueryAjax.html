@@ -37,6 +37,9 @@
             },
             success(data){
                 exibirResultado('post', data)
+            },
+            error(e){
+                exibirResultado('post', e)
             }
         })
     </script>
