@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const { series, parallel } = require('gulp')
 // const { series } = require('gulp')
 
-const series = gulp.series
+// const series = gulp.series
 
 const antes = cb => {
     console.log('tarefa antes!')
@@ -15,7 +15,15 @@ const antes2 = cb => {
 }
 
 function copiar(cb){
-    console.log('Tarefa de copiar.')
+    // gulp.src(['pastaA/arquivo1.txt', 'pastaA/arquivo2.txt'])
+    gulp.src('pastaA/**/*.txt')
+    // .pipe(imagePelaMetade())
+    // .pipe(imageEmPretoEBranco())
+    // .pipe(tranformacaoA())
+    // .pipe(tranformacaoB())
+    // .pipe(tranformacaoC())
+    /*Essa transformacoes sao so um exemplo para mostrar como o processo ocorre. */
+        .pipe(gulp.dest('pastaB'))
     return cb()
 }
 
