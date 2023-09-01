@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const { series, parallel } = require('gulp')
 // const { series } = require('gulp')
 
 const series = gulp.series
@@ -24,8 +25,7 @@ const fim = cb => {
     return cb()
 }
 module.exports.default = series(
-    antes,
-    antes2,
+    parallel(antes, antes2),
     copiar,
     fim,
     )
