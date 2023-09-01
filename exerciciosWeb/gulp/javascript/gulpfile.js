@@ -10,5 +10,10 @@ function padrao(cb){
             coments: false,
             presents: ["env"]
         }))
+        .pipe(uglify())// Unifica o codigo em uma linha
+        .pipe(concat('codigo.min.js'))
+        .pipe(gulp.dest('build'))
     return cb()
 }
+
+exports.default = series(padrao)
