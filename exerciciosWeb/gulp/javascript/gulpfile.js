@@ -1,4 +1,4 @@
-const { series } = require('gulp')
+const { series, parallel } = require('gulp')
 const gulp = require('gulp')
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify')
@@ -21,4 +21,4 @@ function padrao(cb) {
     }
 }
 
-exports.default = series(padrao, fim)
+exports.default = parallel(padrao, fim)
