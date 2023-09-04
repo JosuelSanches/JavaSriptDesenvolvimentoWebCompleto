@@ -11,3 +11,5 @@ function transformacaoCSS(){
         .pipe(concat('estilo.min.css'))
         .pipe(gulp.dest('buld/css'))
 }
+
+exports.default = series(transformacaoCSS)
