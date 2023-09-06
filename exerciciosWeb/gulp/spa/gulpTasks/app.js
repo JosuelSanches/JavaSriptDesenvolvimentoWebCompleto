@@ -32,7 +32,7 @@ function appIMG(){
     return gulp.src('src/assets/imgs/**/*.*')
         .pipe(gulp.dest('build/assets/imgs'))
 }
-
+gulp.task('appHTML', appHTML)
 module.exports = {
     appHTML,
     appCSS,
