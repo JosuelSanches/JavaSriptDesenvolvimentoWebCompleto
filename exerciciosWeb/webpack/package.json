@@ -7,10 +7,10 @@
     "start": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Josuel Sanches",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack": "4.8.1",
+    "webpack-cli": "2.1.3"
   }
 }
