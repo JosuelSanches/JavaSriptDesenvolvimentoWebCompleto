@@ -1,5 +1,5 @@
 // module.exports =
-import './modulos/moduloA' 
+import './modulos/moduloA'
 export default class Pessoa{
     cumprimentar(){
         return 'Bom dia!'
