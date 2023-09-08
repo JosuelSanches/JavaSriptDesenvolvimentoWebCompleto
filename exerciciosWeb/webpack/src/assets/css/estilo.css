@@ -4,3 +4,7 @@ h1{
 body{
     background-color: red;
 }
+.pergunta{
+    color:chartreuse;
+    font-size: 40px;
+}
