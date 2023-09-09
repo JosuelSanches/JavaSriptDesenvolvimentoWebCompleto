@@ -1,14 +1,8 @@
-/*!********************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/css/estilo.css ***!
-  \********************************************************************************************************************/
-div {
-  color: darkcyan;
-  font-size: 70px;
-  font-weight: bolder; }
-
-body {
-  background-color: silver; }
-
-.pergunta {
-  color: green; }
+/*!*********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/scss/index.scss ***!
+  \*********************************************************************************************************************/
+.botao {
+  background-color: #19b3E6;
+  color: #fff;
+  font-size: 1.8em; }
 
