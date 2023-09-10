@@ -11,6 +11,15 @@ module.exports = {
         filename: 'principal.js',
         path: __dirname + '/public'
     },
+    optimization:{
+        minimizer: [
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    },
     plugins:[
         new MiniCssExtractPlugin({
             filename: "estilo.css"
