@@ -5,19 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack"
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "Josuel Sanches",
   "license": "ISC",
   "devDependencies": {
     "cross-env": "7.0.3",
-    "optimize-css-assets-webpack-plugin": "6.0.1",
-    "uglifyjs-webpack-plugin": "2.2.0",
-    "node-sass": "9.0.0",
-    "sass-loader":"13.3.2",
+    "css-loader": "^6.8.1",
     "mini-css-extract-plugin": "2.7.6",
-     "css-loader": "^6.8.1",
-     "style-loader": "0.21.0",
+    "node-sass": "9.0.0",
+    "optimize-css-assets-webpack-plugin": "6.0.1",
+    "sass-loader": "13.3.2",
+    "style-loader": "0.21.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "5.88.2",
     "webpack-cli": "5.1.4"
   }
