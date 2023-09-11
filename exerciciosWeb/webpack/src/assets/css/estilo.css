@@ -3,6 +3,11 @@ div{
     font-size: 70px;
     font-weight: bolder;
 }
+.pergunta{
+    color: cornflowerblue;
+    font-size: 80 px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 body{
     background-color:silver;
     background-image: url(../images/logo.png);
@@ -10,6 +15,7 @@ body{
     background-position: center;
     height: 100vh;
 }
-.pergunta{
+.resposta{
     color:green;
+    font-size: 50px;
 }
