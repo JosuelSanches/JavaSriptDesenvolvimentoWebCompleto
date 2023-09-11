@@ -1,8 +1,8 @@
 const modoDev = process.env.NODE_ENV != 'production'
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimize-webpack-plugin')
 
 module.exports = {
     mode: modoDev ? 'development' : 'production',
@@ -13,19 +13,27 @@ module.exports = {
     },
     optimization:{
         minimizer: [
-            new OptimizeCSSAssetsPlugin({})
+            (compiler)=> {
+                const TerserPlugin = require('terser-webpack-plugin');
+                new TerserPlugin({
+                    terserOptions:{
+                        compress:{},
+                    }
+                }).apply(compiler);
+            },
+            new CssMinimizerPlugin({})
         ]
     },
     plugins:[
+        new MiniCssExtractPlugin({
+            filename:'estilo.css'
+        }),
         new TerserPlugin({
             parallel: true,
             terserOptions:{
                 ecma: 6,
-            }
-        })
-        new MiniCssExtractPlugin({
-            filename: "estilo.css"
-        })
+            },
+        }),
     ],
     module:{
         rules:[{
