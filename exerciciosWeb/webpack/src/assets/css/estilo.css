@@ -24,7 +24,9 @@ body{
     border-radius: 10px;
 }
 h2{
-    color: blue;
+    position: absolute;
+    bottom: 0;
+    color: lightblue;
     font-size: 30px;
     text-align: right;
 }
