@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack",
+    "start": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack"
   },
   "keywords": [],
   "author": "Josuel Sanches",
   "license": "ISC",
   "devDependencies": {
+    "webpack-dev-server": "4.15.1",
     "file-loader": "6.2.0",
     "cross-env": "7.0.3",
     "css-loader": "^6.8.1",
