@@ -10,7 +10,7 @@ div{
 }
 body{
     background-color:silver;
-    background-image: url(../images/logo.png);
+    background-image: url(../imgs/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
