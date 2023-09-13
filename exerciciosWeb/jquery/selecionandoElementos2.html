@@ -94,5 +94,18 @@
         $('main').children().css(comBorda).css(semBorda)
 
         $('body').find('a').css(comBorda).css(semBorda)
-    </script>
+
+        const elementoDOM = document.getElementsByClassName('menu')
+        $(elementoDOM).css(comBorda)
+
+        $('main').children().each((i, e) => $(e).css(comBorda).css(semBorda))
+        $('li').each((i, e)=>{
+            $(e).css(comBorda).css(semBorda)
+        })
+        </script>
+        <!-- Os elementos selecionado
+        e um no puro da DOM devem ser
+         usando com $ para que tenha acesso as 
+        funcionalidades do jQuery
+        -->
 </body>
