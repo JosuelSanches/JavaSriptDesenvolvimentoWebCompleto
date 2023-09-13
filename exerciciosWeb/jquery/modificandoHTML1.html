@@ -15,6 +15,21 @@
     <div id='conteudo3'></div>
 
     <script>
-        // ...
+        // conteudo 1
+        $('#conteudo1').append('<p>Cameta 1</p>')
+
+        //conteudo 2
+        const elementos = [
+            $('<li></li>').append('Acai'),
+            $('<li>').append('Mapara'),
+            $('<li>').append('Manicoba'),
+            $('<li>').append('Camarao')
+        ]
+
+        const lista = $('<ul><li>Bacuri</li></ul>').append(elementos)
+        $('#conteudo2').append(lista)
+        /*Para adcionar elementos antes dos 
+        elementos ja existentes se usa o prepend 
+        no lugar de append.*/
     </script>
 </body>
