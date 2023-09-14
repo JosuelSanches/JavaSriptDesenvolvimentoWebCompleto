@@ -55,5 +55,9 @@
         }
 
         $('[wm-relogio]').each((i, e)=> new Relogio(e))
+
+        //Adcionar e remover atributo
+        $('[wm-relogio]').attr({opa: 1, novo: true})
+        $('[wm-relogio]').removeAttr('opa').removeAttr('novo')
     </script>
 </body>
