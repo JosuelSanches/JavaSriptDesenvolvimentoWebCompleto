@@ -13,6 +13,7 @@
     <div id='conteudo1'></div>
     <div id='conteudo2'></div>
     <div id='conteudo3'></div>
+    <div>Peixe</div>
 
     <script>
         // conteudo 1
@@ -36,6 +37,10 @@
                 .append('<h1>Castanhal -2</h1>').prepend('<h1>Medicilandia -0</h1>')
         $('#conteudo3').html('<h1>Breves - 1</h1>')//Substitui conteudo
         $('#conteudo3').text('<h1> --Nao vai interpretar isto como html -- </h1>')
+        
+        //Alterando todos
+        // Nem e nessario usar o id apos div, nesse caso se usa para alterar somentes as divs com id
+        $('div[id]').html('<strong>Amazonia</strong>')
         
     </script>
 </body>
