@@ -26,8 +26,8 @@
                 const tdNome = $('<td>').html(a.nome)
                 const tdNota = $('<td>').html(a.nota)
                 // return $('<tr>').append(tdNome).append(tdNota)
-                // return $('<tr>').append(tdNome, tdNota)
-                return $('<tr>').append([tdNome, tdNota])
+                return $('<tr>').append(tdNome, tdNota)
+                // return $('<tr>').append([tdNome, tdNota])
             })
 
             const tabela = $('<table>').append(linhas)
