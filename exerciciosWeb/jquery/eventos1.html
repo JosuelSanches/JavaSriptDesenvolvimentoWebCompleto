@@ -32,5 +32,12 @@
         $('#posicao').mouseleave(e=>{
             $('body').on('mousemove', mostrarPosicaoMouse)
         })
+
+        let cliques = 0
+        $('body').click(e => {
+            $('#cliques').html(`Cliques: ${++cliques}`)
+        })
+
+        const backgroundOriginal = $('body').css('background-color')
     </script>
 </body>
