@@ -19,6 +19,22 @@
         $(this).append(horaDezena, horaUnidade, separadorHora,
              minutoDezena, minutoUnidade, separadorMinuto,
             segundoDezena, segundoUnidade, mensagem)
+        const regex = new RegExp(/(\d\d):(\d\d):(\d\d)/)
+        const horarioAlvo = regex.exec(opcoesFinais.horario)
+        //console.log(horarioAlvo)
+        let temporizador = setInterval(() => {
+            const agora = new Date()
+            const alvo = new Date()
+
+            alvo.setHours(horarioAlvo[1])
+            alvo.setMinutes(horarioAlvo[2])
+            alvo.setSeconds(horarioAlvo[3])
+
+            const diferencaEmMili = alvo.getTime() - agora.getTime()
+            if(diferencaEmMili >= 0){
+                
+            }
+        }, 1000)
 
         return this
 
