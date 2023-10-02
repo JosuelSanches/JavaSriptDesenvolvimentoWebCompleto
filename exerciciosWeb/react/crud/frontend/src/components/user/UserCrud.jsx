@@ -79,7 +79,7 @@ export default class UserCrud extends Component {
                         onClick={e => this.save(e)}>
                             Salvar
                         </button>
-                        <button className="btn btn-secondary ml-2"
+                        <button className="btn btn-secondary m-2 mt-0 mb-0"
                         onClick={e => this.clear(e)}>
                             Cancelar
                         </button>
@@ -127,7 +127,7 @@ export default class UserCrud extends Component {
                     <td>
                         <button className="btn btn-warning "><i className="fa fa-pencil"
                         onClick={()=> this.load(user)}></i></button>
-                        <button className="btn btn-danger m-2"
+                        <button className="btn btn-danger m-2 mt-0 mb-0"
                         onClick={() => this.remove(user)}>
                             <i className="fa fa-trash"></i>
                         </button>
