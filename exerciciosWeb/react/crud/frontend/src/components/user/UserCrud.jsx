@@ -16,6 +16,12 @@ const inicialState = {
 export default class UserCrud extends Component {
     state = {...inicialState}
 
+    UNSAFE_componentWillMount(){
+        axios(baseUrl).then(resp => {
+            this.setState({ list: resp.data })
+        })
+    }
+
     clear() {
         this.setState({user: inicialState})
     }
@@ -32,7 +38,7 @@ export default class UserCrud extends Component {
 
     getUpdateList(user){
         const list = this.state.list.filter(u => u.id !== user.id)
-        list.unshift(user)
+        if(user) list.unshift(user)
         return list
     }
     updateField(event){
@@ -74,13 +80,23 @@ export default class UserCrud extends Component {
                             Salvar
                         </button>
                         <button className="btn btn-secondary ml-2"
-                        onclick={e => this.clear(e)}>
+                        onClick={e => this.clear(e)}>
                             Cancelar
                         </button>
                     </div>
                 </div>
             </div>
         )
+    }
+    load(user) {
+        this.setState({ user })
+    }
+
+    remove(user){
+        axios.delete(`${baseUrl}/${user.id}`).then(resp => {
+            const list = this.getUpdateList(null)
+            this.setState(list)
+        })
     }
     render(){
         return(
