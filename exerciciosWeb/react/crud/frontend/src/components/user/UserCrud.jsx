@@ -23,7 +23,7 @@ export default class UserCrud extends Component {
     }
 
     clear() {
-        this.setState({user: inicialState})
+        this.setState({user: inicialState.user})
     }
     save(){
         const user = this.state.user
@@ -36,9 +36,9 @@ export default class UserCrud extends Component {
             })
     }
 
-    getUpdateList(user){
+    getUpdateList(user, add = true){
         const list = this.state.list.filter(u => u.id !== user.id)
-        if(user) list.unshift(user)
+        if(add) list.unshift(user)
         return list
     }
     updateField(event){
@@ -94,14 +94,53 @@ export default class UserCrud extends Component {
 
     remove(user){
         axios.delete(`${baseUrl}/${user.id}`).then(resp => {
-            const list = this.getUpdateList(null)
-            this.setState(list)
+            const list = this.getUpdateList(user, false)
+            this.setState({list})
+        })
+    }
+
+    renderTable(){
+        return(
+            <table className="table mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.renderRows()}
+                </tbody>
+            </table>
+        )
+    }
+
+    renderRows(){
+        return this.state.list.map(user => {
+            return (
+                <tr Key={user.id}>
+                    <td>{user.id}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>
+                        <button className="btn btn-warning "><i className="fa fa-pencil"
+                        onClick={()=> this.load(user)}></i></button>
+                        <button className="btn btn-danger m-2"
+                        onClick={() => this.remove(user)}>
+                            <i className="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            )
         })
     }
     render(){
         return(
             <Main {...headerProps}>
                 {this.renderForm()}
+                {this.renderTable()}
             </Main>
         )
     }

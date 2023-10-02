@@ -1,16 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Adalberto Munhoes de Santa Cruz",
-      "email": "adalbertodesantacruz@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "Jose Ricardo de Freitas Assuncao",
-      "email": "joseAssuncao@gmail.com"
-    },
-    {
       "name": "Hellen da Conceicao Trindade Ferreira",
       "email": "hellenFerreira@gmail.com",
       "id": 3
@@ -21,9 +11,19 @@
       "id": 4
     },
     {
-      "name": "",
-      "email": "",
-      "id": 5
+      "name": "Ester Teixeira da Paixão",
+      "email": "esterTeixeira@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Ema de Castro Feitosa",
+      "email": "emaFeitosa@gmail.com",
+      "id": 7
+    },
+    {
+      "name": "Jessica Barbosa de Almeida",
+      "email": "jessicadealmeida@gmail.com",
+      "id": 8
     }
   ]
 }
