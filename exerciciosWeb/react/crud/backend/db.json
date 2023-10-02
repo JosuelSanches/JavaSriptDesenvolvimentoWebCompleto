@@ -1,11 +1,24 @@
 {
-    "users": [{
-        "id": 1,
-        "name": "Antonio Ramos Sanches",
-        "email": "antonioramossanches@gmail.com"
-    },{
-        "id": 2,
-        "name": "Maria Salumea de Souza",
-        "email":"mariasalumeadesouza"
-    }]
+  "users": [
+    {
+      "id": 1,
+      "name": "Adalberto Munhoes de Santa Cruz",
+      "email": "antonioramossanches@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Jose Ricardo de Freitas Assuncao",
+      "email": "joseAssuncao@gmail.com"
+    },
+    {
+      "name": "Hellen da Conceicao Trindade Ferreira",
+      "email": "hellenFerreira@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Rita Da Cruz Moraes",
+      "email": "ritinhamoraes@gmail.com",
+      "id": 4
+    }
+  ]
 }
