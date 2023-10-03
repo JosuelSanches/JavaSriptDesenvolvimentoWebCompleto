@@ -104,7 +104,7 @@ export default class UserCrud extends Component {
             <table className="table mt-4">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        {/*<th>ID</th>*/}
                         <th>Nome</th>
                         <th>E-mail</th>
                         <th>Ações</th>
@@ -121,13 +121,13 @@ export default class UserCrud extends Component {
         return this.state.list.map(user => {
             return (
                 <tr Key={user.id}>
-                    <td>{user.id}</td>
+                    {/*<td>{user.id}</td>*/}
                     <td>{user.name}</td>
                     <td>{user.email}</td>
                     <td>
-                        <button className="btn btn-warning "><i className="fa fa-pencil"
+                        <button className="btn btn-warning m-1 "><i className="fa fa-pencil"
                         onClick={()=> this.load(user)}></i></button>
-                        <button className="btn btn-danger m-2 mt-0 mb-0"
+                        <button className="btn btn-danger m-1"
                         onClick={() => this.remove(user)}>
                             <i className="fa fa-trash"></i>
                         </button>
