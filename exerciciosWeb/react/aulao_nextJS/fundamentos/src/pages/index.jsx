@@ -14,6 +14,7 @@ export default function Inicio(){
             <Navegador texto="Estiloso" destino="/estiloso"/>
             <Navegador texto="Exemplo" destino="/exemplo" cor="#a5d23d"/>
             <Navegador texto="JSX" destino="/jsx" cor="crimson"/>
+            <Navegador texto="Navegacao #01" destino="/navegacao" cor="#33d9ad"/>
         </div>
         <div style={{
             display:'flex',
