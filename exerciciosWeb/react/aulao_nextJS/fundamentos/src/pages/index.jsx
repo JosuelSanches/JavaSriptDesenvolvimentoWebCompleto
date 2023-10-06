@@ -17,6 +17,7 @@ export default function Inicio(){
             <Navegador texto="Navegacao #01" destino="/navegacao" cor="#33d9ad"/>
             <Navegador texto="Navegacao #02" destino="/cliente/Parana/9003" cor="#7a0466"/>
             <Navegador texto="componente com Estado" destino="/estado" cor="#855c05"/>
+            <Navegador texto="Integracao com API #01" destino="/integracao_1" cor="#59046e"/>
         </div>
         <div style={{
             display:'flex',
