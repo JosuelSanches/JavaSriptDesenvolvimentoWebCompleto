@@ -7,7 +7,7 @@ export default function Integracao(){
     const [cliente, setCliente] = useState({})
     async function obterCliente(){
 
-        const resp = await fetch(`http://localhost:3000/api/clientes/2001${codigo}`)
+        const resp = await fetch(`http://localhost:3000/api/clientes/${codigo}`)
         const dados = await resp.json()
         setCliente(dados)   
         
