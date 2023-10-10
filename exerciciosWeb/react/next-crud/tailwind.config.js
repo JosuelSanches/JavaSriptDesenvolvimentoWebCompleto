@@ -3,6 +3,7 @@ module.exports = {
   content: [
   './src/pages/index.tsx',
   './src/components/Titulo.tsx',
+  './src/components/Tabela.tsx',
   './src/components/Layout.tsx'],
   theme: {
     extend: {},
