@@ -5,6 +5,8 @@ module.exports = {
     './src/pages/index.tsx',
     './src/components/Titulo.tsx',
     './src/components/Icones.tsx',
+    './src/components/Entrada.tsx',
+    './src/components/Formulario.tsx',
     './src/components/Botao.tsx',
     './src/components/Tabela.tsx',
     './src/components/Layout.tsx'],
