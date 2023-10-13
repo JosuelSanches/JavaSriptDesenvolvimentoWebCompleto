@@ -10,7 +10,6 @@ export default function Home() {
   const {clientes,
     cliente,
     selecionarCliente,
-    obterTodos,
     excluirCliente,
     salvarCliente,
     novoCliente ,
@@ -42,7 +41,7 @@ export default function Home() {
           <Formulario 
             cliente={cliente}
             clienteMudou={salvarCliente}
-            cancelado={()=>exibirTabela}
+            cancelado={exibirTabela}
           />
           )}
           </Layout>

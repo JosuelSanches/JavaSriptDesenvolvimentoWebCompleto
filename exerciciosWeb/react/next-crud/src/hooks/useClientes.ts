@@ -43,7 +43,6 @@ export default function useClientes(){
     salvarCliente,
     excluirCliente,
     selecionarCliente,
-    obterTodos,
     cliente,
     clientes,
     tabelaVisivel,
