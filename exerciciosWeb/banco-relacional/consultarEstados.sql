@@ -10,3 +10,5 @@ select sigla, nome as 'Nome do estado' from estados WHERE regiao = 'Norte'
 
 select nome, regiao, populacao as 'Estados com mais de 10 milhoes de habitantes' 
 from estados WHERE populacao > 8 order by populacao desc
+
+SELECT sigla, nome as `Estado` from estados where regiao = 'Nordeste'
