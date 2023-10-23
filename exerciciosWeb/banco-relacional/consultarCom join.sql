@@ -1,7 +1,7 @@
 select e.nome AS Estado, 
 c.nome as Cidade, 
 e.regiao as regiao
- from estados e, cidade c
+ from estados e, cidades c
 where e.id = c.estado_id;
 
 select 
@@ -9,4 +9,4 @@ select
     e.nome as Estado,
     regiao as regiao
 from estados e
-inner join cidade c on e.id = c.estado_id
+inner join cidades c on e.id = c.estado_id
