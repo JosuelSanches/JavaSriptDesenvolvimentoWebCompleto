@@ -1,4 +1,4 @@
-create table if not exists cidade (
+create table if not exists cidades (
     id int unsigned not null auto_increment,
     nome varchar(255) not null,
     estado_id int unsigned not null,
@@ -11,3 +11,5 @@ create table if not exists cidade (
 --    id int unsigned not null auto_increment primary key
 --);
 --drop table if exists teste;
+
+drop table if exists cidade;
