@@ -26,7 +26,7 @@ export default function Integracao(){
             <ul>
                 <li>Codigo: {cliente.id}</li>
                 <li>Nome: {cliente.nome}</li>
-                <li>Email:{cliente.email}</li>
+                <li>Email: {cliente.email}</li>
             </ul>
         </Layout>
     )
