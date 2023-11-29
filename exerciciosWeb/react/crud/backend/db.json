@@ -1,33 +1,28 @@
 {
   "users": [
     {
-      "name": "Hellen da Conceicao Trindade Ferreira",
-      "email": "hellenFerreira@gmail.com",
-      "id": 3
-    },
-    {
       "name": "Rita Da Cruz Moraes",
-      "email": "ritinhamoraes@gmail.com",
+      "email": "ritinhamoraes@react.com",
       "id": 4
     },
     {
       "name": "Ester Teixeira da Paixão",
-      "email": "esterTeixeira@gmail.com",
+      "email": "esterTeixeira@react.com",
       "id": 6
     },
     {
       "name": "Ema de Castro Feitosa",
-      "email": "emaFeitosa@gmail.com",
+      "email": "emaFeitosa@react.com",
       "id": 7
     },
     {
       "name": "Jessica Barbosa de Almeida",
-      "email": "jessicadealmeida@gmail.com",
+      "email": "jessicadealmeida@react.com",
       "id": 8
     },
     {
       "name": "Carlos Antonio Braga Leao",
-      "email": "",
+      "email": "calosleao@rect.com",
       "id": 10
     },
     {
