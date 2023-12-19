@@ -48,4 +48,4 @@ app.get('/parOuImpar', (req,res) => {
 })
 
 // app.get('/teste', (req, res)=> res.send('ok'))
-app.listen(8080, () => console.log('Executando...'))
+app.listen(8080, () => console.log('Executando agora...'))
